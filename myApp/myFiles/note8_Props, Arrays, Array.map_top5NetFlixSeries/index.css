@@ -1,0 +1,236 @@
+.heading_style{
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Raleway',sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #a3a3a3;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  background: rgba(216, 216, 216, 0.315);
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  
+}
+.locandina{
+  border-radius: 5px;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  color: #777;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.movie_card {
+  position: relative;
+  display: block;
+  width: 800px;
+  height: 350px;
+  margin: 80px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 120px -25px rgba(0, 0, 0, 0.5);
+}
+.movie_card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 80px -25px rgb(247, 2, 2);
+  transition: all 0.4s;
+}
+.movie_card .info_section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  z-index: 2;
+  border-radius: 10px;
+}
+.movie_card .info_section .movie_header {
+  position: relative;
+  padding: 25px;
+  height: 40%;
+}
+.movie_card .info_section .movie_header h1 {
+  color: black;
+  font-weight: 400;
+}
+.movie_card .info_section .movie_header h4 {
+  color: #555;
+  font-weight: 400;
+}
+.movie_card .info_section .movie_header .minutes {
+  display: inline-block;
+  margin-top: 15px;
+  color: #555;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(15, 15, 15, 0.185);
+}
+.movie_card .info_section .movie_header .type {
+  display: inline-block;
+  color: #959595;
+  margin-left: 10px;
+}
+.movie_card .info_section .movie_header .locandina {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  height: 120px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+.movie_card .info_section .movie_desc {
+  padding: 25px;
+  height: 50%;
+}
+.movie_card .info_section .movie_desc .text {
+  color: #545454;
+}
+.movie_card .info_section .movie_social {
+  height: 10%;
+  padding-left: 15px;
+  padding-bottom: 20px;
+}
+.movie_card .info_section .movie_social ul {
+  list-style: none;
+  padding: 0;
+}
+.movie_card .info_section .movie_social ul li {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.3);
+  transition: color 0.3s;
+  transition-delay: 0.15s;
+  margin: 0 10px;
+}
+.movie_card .info_section .movie_social ul li:hover {
+  transition: color 0.3s;
+  color: rgba(0, 0, 0, 0.7);
+}
+.movie_card .info_section .movie_social ul li i {
+  font-size: 19px;
+  cursor: pointer;
+}
+.movie_card .blur_back {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  right: 0;
+  background-size: cover;
+  border-radius: 11px;
+}
+.button{
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4em;
+    font-size: 12px;
+    color: white;
+    padding: 0.8em 1.8em;
+    cursor:pointer;
+    user-select:none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    font-family: "Montserrat", helvetica, arial, sans-serif;
+  }
+  
+  .button:hover {
+    transition-duration: 0.1s;
+    background-color: #1b1919;
+  }
+  
+  .button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+  }
+  
+  .button:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 4em;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
+  }
+  
+  .button:active {
+    top: 1px;
+  }
+
+@media screen and (min-width: 768px) {
+  .movie_header {
+    width: 65%;
+  }
+
+  .movie_desc {
+    width: 50%;
+  }
+
+  .info_section {
+    background: linear-gradient(to right, #e5e6e6 50%, transparent 100%);
+  }
+
+  .blur_back {
+    width: 80%;
+    background-position: -100% 10% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .movie_card {
+    width: 95%;
+    margin: 70px auto;
+    min-height: 350px;
+    height: auto;
+  }
+
+  .blur_back {
+    width: 100%;
+    background-position: 50% 50% !important;
+  }
+
+  .movie_header {
+    width: 100%;
+    margin-top: 85px;
+  }
+
+  .movie_desc {
+    width: 100%;
+  }
+
+  .info_section {
+    background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
+    display: inline-grid;
+  }
+}
+.cardBgImg_back {
+  background: url("https://help.nflxext.com/0af6ce3e-b27a-4722-a5f0-e32af4df3045_what_is_netflix_5_en.png");
+}

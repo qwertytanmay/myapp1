@@ -14,7 +14,7 @@ return(
     <>
         <input id="input" onChange={whileTyping}></input>
         <p id="text">{display}</p>
-        <button id="button" onClick={final}></button>
+        <button id="button" onClick={final}>Click me</button>
     </>
 )
 }
